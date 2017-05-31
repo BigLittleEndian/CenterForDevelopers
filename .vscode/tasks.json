@@ -7,9 +7,22 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/CenterForDevelopers.csproj"
+                "${workspaceRoot}/CenterForDevelopers/CenterForDevelopers.csproj"
             ],
             "isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "Unit Tests",
+            "command": "dotnet",
+            "args": [
+                "test"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/CenterForDevelopersTest"
+            },
+            "isTestCommand": true,
+            "showOutput": "always",
             "problemMatcher": "$msCompile"
         }
     ]

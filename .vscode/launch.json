@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.1/CenterForDevelopers.dll",
+            "program": "${workspaceRoot}/CenterForDevelopers/bin/Debug/netcoreapp1.1/CenterForDevelopers.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/CenterForDevelopers",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
@@ -34,7 +34,7 @@
                 "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
             },
             "sourceFileMap": {
-                "/Views": "${workspaceRoot}/Views"
+                "/Views": "${workspaceRoot}/CenterForDevelopers/Views"
             }
         },
         {
