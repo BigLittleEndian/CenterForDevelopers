@@ -1,0 +1,15 @@
+@model ValueTuple<string, int>
+
+@{
+    ViewData["Title"] = "C# ValueTuple";
+    (string text, int number) = Model;  @* ORDER IS IMPORTANT Model is just Item1,Item2!!! *@
+}
+
+<h3>Blog Article: <a href="http://www.biglittleendian.com/article/101">C#7 - New ValueTuple Will Help You Write Less Code</a></h3>
+
+<b>Text: @text</b></br>
+<b>Number: @number</b>
+
+<h4>Examples (Unit test project):</h4>
+Project: <pre>CenterForDevelopersTest</pre>
+File: <pre>ExampleCSharp/ValueTupleTest.cs</pre>
