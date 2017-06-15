@@ -149,7 +149,7 @@ namespace CenterForDevelopers
             var hero = new Hero("Big Hero", 6);
 
             // To play with exception pass "-1" below:
-            var increase = -1;
+            var increase = 1;
 
             // * A *
             // With Local Function you will get exception here:
