@@ -1,7 +1,7 @@
 @model ValueTuple<string, int>
 
 @{
-    ViewData["Title"] = "C# ValueTuple";
+    ViewData["Title"] = "C#7 ValueTuple";
     (string text, int number) = Model;  @* ORDER IS IMPORTANT Model is just Item1,Item2!!! *@
 }
 
@@ -10,6 +10,4 @@
 <b>Text: @text</b></br>
 <b>Number: @number</b>
 
-<h4>Examples (Unit test project):</h4>
-Project: <pre>CenterForDevelopersTest</pre>
-File: <pre>ExampleCSharp/ValueTupleTest.cs</pre>
+@Html.Partial("_UnitTestFileNames", "ExampleCSharp/ValueTupleTest.cs")

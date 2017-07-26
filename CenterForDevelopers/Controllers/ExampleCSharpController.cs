@@ -18,8 +18,8 @@ namespace CenterForDevelopers.Controllers
         }
 
         /*  Examples:
-            Project: <pre>CenterForDevelopersTest</pre>
-            File: <pre>ExampleCSharp/LocalFunctionsTest.cs</pre>       
+            Project: CenterForDevelopersTest
+            File: ExampleCSharp/LocalFunctionsTest.cs      
         */
         public IActionResult LocalFunctions()
         {
@@ -32,5 +32,21 @@ namespace CenterForDevelopers.Controllers
                 return startNumber + increment;
             }
         }
+
+        /*  Examples:
+            Project: CenterForDevelopersTest
+            File: ExampleCSharp/OutAndRefReturnTest.cs      
+        */
+        public IActionResult OutAndRefReturn()
+        {
+            var local = 555;
+
+            ref var referenceToLocal = ref local;
+
+            referenceToLocal = 444;
+
+            return View(local);
+        }
+
     }
 }
