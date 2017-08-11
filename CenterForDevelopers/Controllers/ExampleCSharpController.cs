@@ -48,5 +48,33 @@ namespace CenterForDevelopers.Controllers
             return View(local);
         }
 
+		/*  Examples:
+			Project: CenterForDevelopersTest
+			File: ExampleCSharp/PatternMatchingTest.cs      
+		*/
+		public IActionResult PatternMatching()
+		{
+			var valuesToSum = new List<object> { 1, 2, new List<object> { 3, 4 } };
+
+			int LocalSumFunction(IEnumerable<object> numbers)
+			{
+				var sum = 0;
+
+				foreach (var item in numbers)
+				{
+					if (item is int value)
+						sum += value;
+					else if (item is IEnumerable<object> list)
+						sum += LocalSumFunction(list);
+				}
+
+				return sum;
+			}
+
+			var totalSum = LocalSumFunction(valuesToSum);
+
+			return View(null /*viewName*/, totalSum);
+		}
+
     }
 }
