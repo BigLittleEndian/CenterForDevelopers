@@ -1,0 +1,25 @@
+@page
+
+@model IndexPageModel
+
+<h3>Blog Article: <a href="http://www.biglittleendian.com/article/105">ASP.NET Core 2.0 Razor Pages – When I Grow up I Want to Be MVVM</a></h3>
+
+<h4>@Model.Message</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
